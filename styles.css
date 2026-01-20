@@ -1,0 +1,389 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c5f6e;
+    --primary-light: #d4e8eb;
+    --primary-lighter: #e8f4f6;
+    --accent-color: #4a8a9a;
+    --text-dark: #333333;
+    --text-medium: #555555;
+    --text-light: #666666;
+    --white: #ffffff;
+    --sidebar-bg: #e8f4f6;
+    --border-color: #b8d4da;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: var(--text-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Botones de control */
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.controls button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-print {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-print:hover {
+    background-color: #1e4a57;
+    transform: translateY(-2px);
+}
+
+.btn-export {
+    background-color: #c0392b;
+    color: var(--white);
+}
+
+.btn-export:hover {
+    background-color: #a33025;
+    transform: translateY(-2px);
+}
+
+/* Contenedor principal del CV */
+.cv-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    min-height: 1400px;
+}
+
+/* Sidebar (columna izquierda) */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 30px 25px;
+}
+
+/* Header con nombre */
+.header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Secciones generales */
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Sobre mí */
+.about p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* Contacto */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.contact-item span {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    word-break: break-word;
+}
+
+/* Cursos */
+.subsection-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.course-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-list li {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.course-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.course-extra {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Aptitudes */
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-list li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+/* Contenido principal (columna derecha) */
+.main-content {
+    padding: 30px 35px;
+}
+
+/* Títulos de sección principal */
+.section-title-main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 4px;
+}
+
+.section-title-main i {
+    font-size: 1rem;
+}
+
+/* Experiencia profesional */
+.experience-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.job-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Otra experiencia */
+.other-experience {
+    margin-top: 25px;
+}
+
+.other-exp-text {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Formación */
+.education {
+    margin-top: 25px;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.degree {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Estilos para impresión y PDF */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cv-container {
+        margin: 0;
+        box-shadow: none;
+        max-width: none;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .section-title-main {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .controls {
+        position: static;
+        justify-content: center;
+        padding: 20px;
+        background-color: var(--primary-color);
+    }
+
+    .cv-container {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .sidebar {
+        padding: 25px 20px;
+    }
+
+    .main-content {
+        padding: 25px 20px;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones sutiles */
+.experience-item {
+    transition: transform 0.2s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-item {
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.skills-list li {
+    transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+    transform: translateX(5px);
+}

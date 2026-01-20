@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jessie Molina González</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botones de control -->
+    <div class="controls no-print">
+        <button onclick="window.print()" class="btn-print">
+            <i class="fas fa-print"></i> Imprimir / Guardar PDF
+        </button>
+        <button onclick="exportToPDF()" class="btn-export">
+            <i class="fas fa-file-pdf"></i> Exportar a PDF
+        </button>
+    </div>
+
+    <div class="cv-container" id="cv-content">
+        <!-- Columna Izquierda -->
+        <aside class="sidebar">
+            <header class="header">
+                <h1 class="name">JESSIE MOLINA GONZÁLEZ</h1>
+            </header>
+
+            <!-- Sobre Mí -->
+            <section class="section about">
+                <h2 class="section-title">SOBRE MÍ</h2>
+                <p>Soy un apasionado de la construcción y las reformas.</p>
+                <p>Durante mi trayectoria profesional, la mayor parte la he desarrollado en la empresa familiar dedicada a este sector.</p>
+                <p>Me gustaría poder ampliar conocimientos y poder desarrollarme profesionalmente y poder aportar mis conocimientos y ganas de trabajar.</p>
+                <p>Soy una persona con experiencia en otros sectores, lo que me hace poder aportar puntos de vista diferentes a cada trabajo que desempeñe.</p>
+            </section>
+
+            <!-- Contacto -->
+            <section class="section contact">
+                <h2 class="section-title">CONTACTO</h2>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>641 193 147</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>molinagonzalezjessieemmanuel@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>A Coruña</span>
+                </div>
+            </section>
+
+            <!-- Cursos -->
+            <section class="section courses">
+                <h2 class="section-title">CURSOS</h2>
+                <h3 class="subsection-title">PRL:</h3>
+                <ul class="course-list">
+                    <li>Construcción (60 h.) | A Coruña</li>
+                    <li>Operadores de vehículos y maquinaria de movimiento de tierras (6 h.) | A Coruña</li>
+                    <li>Encofrados (6 h.) | A Coruña</li>
+                    <li>Montaje de estructuras tubulares (6 h.) | A Coruña</li>
+                    <li>Albañilería (6 h.) | A Coruña</li>
+                    <li>Pintura (6 h.) | Carballo</li>
+                </ul>
+                <p class="course-extra">Jardinería y mantenimiento de fincas | México</p>
+            </section>
+
+            <!-- Aptitudes -->
+            <section class="section skills">
+                <h2 class="section-title">APTITUDES</h2>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check"></i> Responsabilidad</li>
+                    <li><i class="fas fa-check"></i> Puntualidad</li>
+                    <li><i class="fas fa-check"></i> Proactividad</li>
+                    <li><i class="fas fa-check"></i> Trabajo por objetivos</li>
+                    <li><i class="fas fa-check"></i> Adaptación al cambio</li>
+                    <li><i class="fas fa-check"></i> Rápido aprendizaje</li>
+                    <li><i class="fas fa-check"></i> Dotes comunicativas</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Columna Derecha -->
+        <main class="main-content">
+            <!-- Experiencia Profesional -->
+            <section class="section experience">
+                <h2 class="section-title-main">
+                    <i class="fas fa-briefcase"></i>
+                    EXPERIENCIA PROFESIONAL
+                </h2>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Oficial 1ª aplicación revestimiento decorativo</h3>
+                    <p class="company">Decorga Pintura | 01/24 - 07/24 | A Coruña</p>
+                    <p class="description">Revestimiento decorativo con microcemento y pintura</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Oficial 1ª aplicación revestimiento decorativo</h3>
+                    <p class="company">Be Cover Styl | 11/22 - 01/23 | A Coruña</p>
+                    <p class="description">Aplicación de vinilo</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Peón</h3>
+                    <p class="company">A-Vida Group | 10/21 - 09/23 | A Coruña</p>
+                    <p class="description">Revestimiento decorativo con microcemento</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Encofrador Oficial de 2ª</h3>
+                    <p class="company">Ibérica Contrex S.L. | 09/21 - 10/21 | A Coruña</p>
+                    <p class="description">Abastecimiento de materiales y corte de los mismos (ladrillo y bloque) en edificación de viviendas en el Ofimático</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Encofrador Oficial de 2ª</h3>
+                    <p class="company">Ibérica Contrex S.L. | 05/21 - 07/21 | A Coruña</p>
+                    <p class="description">Apoyo en la elaboración y montaje de encofrados de hierro en edificación de viviendas en el Ofimático</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Oficial de 2ª</h3>
+                    <p class="company">Ibérica Contrex S.L. | 05/21 - 07/21 | A Coruña</p>
+                    <p class="description">Instalación de conductos para aguas pluviales, fibra óptica, entre otros.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Peón</h3>
+                    <p class="company">Obras y Reformas Viper S.L. | 12/20 - 03/21 | Vitoria</p>
+                    <p class="description">Apoyo en la elaboración y montaje de encofrados de hierro para viviendas</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Peón</h3>
+                    <p class="company">Carreira XXI Reformas | 10/19 - 11/19 | Santiago de Compostela</p>
+                    <p class="description">Peón en la construcción de aceras peatonales de urbanización de nueva obra</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Oficial de 2ª</h3>
+                    <p class="company">Pinturas Prado | 08/19 | A Coruña</p>
+                    <p class="description">Pintura de interiores en reformas de edificios (viviendas, institutos, entre otros)</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Peón</h3>
+                    <p class="company">Élite y Diseños | 02/17 - 04/17 y 08/17 - 03/18 | Oleiros</p>
+                    <p class="description">Revestimiento en vinilo de paredes, mobiliario y suelos</p>
+                </div>
+            </section>
+
+            <!-- Otra Experiencia -->
+            <section class="section other-experience">
+                <h2 class="section-title-main">
+                    <i class="fas fa-plus-circle"></i>
+                    OTRA EXPERIENCIA
+                </h2>
+                <p class="other-exp-text">Durante mi trayectoria profesional, también he trabajado como tapicero, carpintero de madera, comercial de pólizas de seguro, ayudante de cocina, recolector, operario de granja y limpieza de fincas</p>
+            </section>
+
+            <!-- Formación -->
+            <section class="section education">
+                <h2 class="section-title-main">
+                    <i class="fas fa-graduation-cap"></i>
+                    FORMACIÓN
+                </h2>
+                <div class="education-item">
+                    <h3 class="degree">Secundaria obligatoria</h3>
+                    <p class="institution">Instituto Ponciano Arriaga | 2000 | México</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- html2pdf library para exportar a PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
