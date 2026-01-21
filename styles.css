@@ -371,10 +371,20 @@ body {
 
     @page {
         size: A4;
-        margin: 10mm;
+        margin: 20mm 10mm 15mm 10mm; /* top right bottom left */
     }
 
     @page :first {
+        margin-top: 0;
+        margin-bottom: 10mm;
+    }
+
+    /* Asegurar que el contenido en páginas nuevas tenga espacio */
+    .experience-item {
+        padding-top: 5px;
+    }
+
+    .section-title-main {
         margin-top: 0;
     }
 }
