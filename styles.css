@@ -310,6 +310,8 @@ body {
         background-color: white;
         margin: 0;
         padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
     .cv-container {
@@ -318,21 +320,62 @@ body {
         max-width: none;
         width: 100%;
         min-height: auto;
+        display: block;
     }
 
     .sidebar {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        float: left;
+        width: 35%;
+        min-height: 100%;
+    }
+
+    .main-content {
+        float: right;
+        width: 65%;
     }
 
     .section-title-main {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* Evitar saltos de página dentro de elementos */
+    .experience-item,
+    .education-item,
+    .section,
+    .contact-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Mantener títulos con su contenido */
+    h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* Evitar que las secciones se corten */
+    .about,
+    .contact,
+    .courses,
+    .skills,
+    .other-experience,
+    .education {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     @page {
         size: A4;
-        margin: 0;
+        margin: 10mm;
+    }
+
+    @page :first {
+        margin-top: 0;
     }
 }
 
